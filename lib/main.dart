@@ -1,26 +1,34 @@
-import 'package:elwedyan/presentation/widgets/check_box_with_text.dart';
+import 'package:elwedyan/presentation/widgets/custom_expandable_list.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
+  double value = 0.0;
+
   @override
   Widget build(BuildContext context) {
-    bool value = true;
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       //  onGenerateRoute: AppRouter.onGenerate,
-      home: CheckBoxWithText(
-        value: value,
-        activeColor: Colors.deepOrange,
-        onChange: (value) {},
-        textStyle: TextStyle(fontSize: 20),
+      home: const Scaffold(
+        body: Center(
+            child: CustomExpandableList(
+          expandableText: 'نوع المنشأة',
+          index: 3,
+          itemsText: 'fiat${1}',
+        )),
       ),
     );
   }

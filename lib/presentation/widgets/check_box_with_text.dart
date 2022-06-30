@@ -18,9 +18,7 @@ class CheckBoxWithText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-
+    return  Center(
         child: Row(children: [
           Transform.scale(
             scale: 1.5,
@@ -35,7 +33,6 @@ class CheckBoxWithText extends StatelessWidget {
             style: textStyle,
           )
         ]),
-      ),
     );
   }
 }
