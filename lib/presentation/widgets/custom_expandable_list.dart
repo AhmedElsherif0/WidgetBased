@@ -16,8 +16,7 @@ class CustomExpandableList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return  Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -45,7 +44,6 @@ class CustomExpandableList extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }
