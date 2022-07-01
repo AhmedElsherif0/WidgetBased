@@ -1,4 +1,5 @@
 import 'package:elwedyan/presentation/widgets/custom_elevated_button.dart';
+import 'package:elwedyan/presentation/widgets/custom_form_field.dart';
 import 'package:elwedyan/presentation/widgets/radio_button_list_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -34,10 +35,9 @@ class _MyAppState extends State<MyApp> {
       //  onGenerateRoute: AppRouter.onGenerate,
       home: Scaffold(
         body: Center(
-            child: CustomElevatedButton( text: 'Send',
-            onPressed: (){},
-              height: 40,
-              width: 200,
+            child: CustomFormField(
+              hintText: 'Email',
+              textInputType: TextInputType.emailAddress,
             )),
       ),
     );
