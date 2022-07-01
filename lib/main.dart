@@ -1,5 +1,12 @@
-import 'package:elwedyan/presentation/widgets/custom_expandable_list.dart';
+import 'package:elwedyan/presentation/widgets/custom_elevated_button.dart';
+import 'package:elwedyan/presentation/widgets/radio_button_list_tile.dart';
 import 'package:flutter/material.dart';
+
+enum Valuable {
+  value1,
+  value2,
+  value3,
+}
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +21,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
-  double value = 0.0;
+
+  PaymentMethod payPal = PaymentMethod.paypal;
+  PaymentMethod paymentMethod = PaymentMethod.other;
+  PaymentMethod creditCard = PaymentMethod.creditCard;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +32,13 @@ class _MyAppState extends State<MyApp> {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       //  onGenerateRoute: AppRouter.onGenerate,
-      home: const Scaffold(
+      home: Scaffold(
         body: Center(
-            child: CustomExpandableList(
-          expandableText: 'نوع المنشأة',
-          index: 3,
-          itemsText: 'fiat${1}',
-        )),
+            child: CustomElevatedButton( text: 'Send',
+            onPressed: (){},
+              height: 40,
+              width: 200,
+            )),
       ),
     );
   }
