@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProductCard extends StatelessWidget {
-  const ProductCard(
+class CustomListTile extends StatelessWidget {
+  const CustomListTile(
       {required this.image,
       required this.title,
       this.firstIcon = const Icon(Icons.chat),
